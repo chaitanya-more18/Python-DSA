@@ -31,4 +31,5 @@ list1.append(n1)
 list1.append(n2)
 list1.append(Node(30))
 list1.append(Node(40))
+
 list1.print()
