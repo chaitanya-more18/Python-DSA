@@ -23,6 +23,7 @@ class SLL:
             print(temp.data)
             temp=temp.next
 
+
 list1=SLL()
 n1=Node(10)
 n2=Node(20)
