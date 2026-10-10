@@ -49,7 +49,7 @@ class LinkedList:
 
         new_node.next = temp.next
         temp.next = new_node
-
+        
     # Find middle node
     def middle(self):
         slow = fast = self.head
