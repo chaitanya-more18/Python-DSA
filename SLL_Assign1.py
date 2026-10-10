@@ -49,20 +49,30 @@ class LinkedList:
 
         new_node.next = temp.next
         temp.next = new_node
-        
+
     # Find middle node
     def middle(self):
-        slow = fast = self.head
+        temp = self.head
+        count = 0
 
-        if self.head is None:
+    # Count number of nodes
+        while temp:
+            count += 1
+            temp = temp.next
+
+        if count == 0:
             print("List is empty")
             return
 
-        while fast and fast.next:
-            slow = slow.next
-            fast = fast.next.next
+    # Find middle position
+        mid = count // 2
 
-        print("Middle node:", slow.data)
+    # Traverse to middle node
+        temp = self.head
+        for i in range(mid):
+            temp = temp.next
+
+        print("Middle node:", temp.data)
 
     # Delete at a specific position
     def delete(self, pos):
@@ -128,7 +138,6 @@ print("Insert 90 at position 3:")
 l1.insert(Node(90), 3)
 l1.display()
 
-print("Middle Node:")
 l1.middle()
 
 print("Delete node at position 2:")
