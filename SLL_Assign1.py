@@ -76,10 +76,6 @@ class LinkedList:
 
     # Delete at a specific position
     def delete(self, pos):
-        if pos < 1 or self.head is None:
-            print("Invalid position")
-            return
-
         if pos == 1:
             self.head = self.head.next
             return
@@ -90,11 +86,6 @@ class LinkedList:
         while temp and p < pos - 1:
             temp = temp.next
             p += 1
-
-        if temp is None or temp.next is None:
-            print("Invalid position")
-            return
-
         temp.next = temp.next.next
 
     # Reverse Linked List
