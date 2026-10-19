@@ -31,7 +31,6 @@ class DoublyLinkedList:
             return
 
         t = self.head
-        print("None <- ",end="")
 
         while t:
             print(f"{t.data} -> ",end="")
@@ -105,15 +104,20 @@ class DoublyLinkedList:
 
 
 dll = DoublyLinkedList()
+
 dll.append(11)
 dll.append(22)
 dll.append(33)
 dll.append(44)
 dll.print()
+
 dll.insert(1,1)
 dll.print()
+
 dll.insert(999,300)
 dll.print()
+
 dll.removeNodeByData(1)
 dll.print()
+
 dll.printByReverse()
