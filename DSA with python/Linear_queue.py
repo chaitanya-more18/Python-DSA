@@ -18,7 +18,13 @@ class LQueue:
         if self.front:
             temp = self.front
             self.front = self.front.next
+
+            #if its last node
+            if self.front==None:
+                self.rear = None
+
             temp = None
+
         else:
             print("Queue is empty...")
 
@@ -35,3 +41,12 @@ q.enqueue(Node(20))
 q.enqueue(Node(30))
 q.enqueue(Node(40))
 q.print()
+
+q.dequeue()
+q.dequeue()
+q.print()
+
+q.dequeue()
+q.dequeue()
+q.print()
+q.dequeue()
