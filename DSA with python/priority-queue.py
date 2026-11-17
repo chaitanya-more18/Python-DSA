@@ -53,7 +53,7 @@ class PriorityQueue:
     def dequeue(self):
         if self.front:
             temp=self.front
-            print("Node deleted: ", temp.data)
+            print("Node deleted:", temp.data)
             self.front=self.front.next
         else:
             print("Queue is empty.")
@@ -70,4 +70,6 @@ pQueue.append(44,3)
 pQueue.append(6,6)
 pQueue.append(55,1)
 
+pQueue.print()
+pQueue.dequeue()
 pQueue.print()
