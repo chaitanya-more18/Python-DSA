@@ -61,9 +61,6 @@ class PriorityQueue:
 
 pQueue = PriorityQueue()
 
-
-
-
 pQueue.append(22,2)
 pQueue.append(1,4)
 pQueue.append(44,3)
