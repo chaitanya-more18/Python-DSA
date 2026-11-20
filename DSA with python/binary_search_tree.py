@@ -25,3 +25,61 @@ class BST:
                         return
                     else:
                         temp = temp.right
+
+    def inorder(self, rt):
+        if rt is None:
+            return
+        else:
+            self.inorder(rt.left)
+            print(rt.data, end=" ")
+            self.inorder(rt.right)
+
+    def preorder(self, rt):
+        if rt is None:
+            return
+        else:
+            print(rt.data, end=" ")
+            self.preorder(rt.left)
+            self.preorder(rt.right)
+
+    def postorder(self, rt):
+        if rt is None:
+            return
+        else:
+            self.postorder(rt.left)
+            self.postorder(rt.right)
+            print(rt.data, end=" ")
+
+    def findminmax(self, rt):
+        if self.root is None:
+            print("Empty tree")
+        else:
+            # Minimum
+            temp = self.root
+            while temp.left is not None:
+                temp = temp.left
+            print("Minimum value is",temp.data)
+            # Maximum
+            temp = self.root
+            while temp.right is not None:
+                temp = temp.right
+                print("Maximum value is",temp.data)
+
+
+
+b1 = BST()
+b1.insert(Node(100))
+b1.insert(Node(10))
+b1.insert(Node(450))
+b1.insert(Node(0))
+b1.insert(Node(65))
+b1.insert(Node(300))
+
+print("Inorder:")
+b1.inorder(b1.root)
+print("\nPreorder:")
+b1.preorder(b1.root)
+print("\nPostorder:")
+b1.postorder(b1.root)
+print()
+b1.findminmax(b1.root)
