@@ -66,7 +66,6 @@ class BST:
                 print("Maximum value is",temp.data)
 
 
-
 b1 = BST()
 b1.insert(Node(100))
 b1.insert(Node(10))
